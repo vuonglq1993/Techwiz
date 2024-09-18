@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import "../Tours/tour.css";
 import { tourDetails } from "../../utils/data";
@@ -18,16 +18,17 @@ import {
 } from "react-bootstrap";
 
 const TourDetails = () => {
-
   useEffect(() => {
     document.title = " Tours  Details  ";
     window.scroll(0, 0);
     // Kiểm tra nếu Instagram widget đã có trong DOM
-    const instagramEmbedScript = document.querySelector('script[src="//www.instagram.com/embed.js"]');
+    const instagramEmbedScript = document.querySelector(
+      'script[src="//www.instagram.com/embed.js"]'
+    );
 
     // Nếu không có script, tạo và chèn nó vào DOM
     if (!instagramEmbedScript) {
-      const script = document.createElement('script');
+      const script = document.createElement("script");
       script.async = true;
       script.src = "//www.instagram.com/embed.js";
 
@@ -250,7 +251,10 @@ const TourDetails = () => {
                           <h5 className="h6"> ({tourDetails.reviews})</h5>
                         </div>
 
-                        <NavLink to="/booking" className="primaryBtn w-100 d-flex justify-content-center fw-bold">
+                        <NavLink
+                          to="/booking"
+                          className="primaryBtn w-100 d-flex justify-content-center fw-bold"
+                        >
                           Book Now
                         </NavLink>
                       </Card.Body>
@@ -261,17 +265,25 @@ const TourDetails = () => {
                         <h1 className="font-bold mb-2 h3">Need Help ?</h1>
 
                         <ListGroup>
-                         
                           <ListGroup.Item className="border-0">
-                          <i className="bi bi-telephone me-1"></i>  Call us on: <strong>+91 123 456 789</strong>
+                            <i className="bi bi-telephone me-1"></i> Call us on:{" "}
+                            <strong>+91 123 456 789</strong>
                           </ListGroup.Item>
                           <ListGroup.Item className="border-0">
-                          <i className="bi bi-alarm me-1"></i> Timing: <strong>10AM to 7PM</strong>
+                            <i className="bi bi-alarm me-1"></i> Timing:{" "}
+                            <strong>10AM to 7PM</strong>
                           </ListGroup.Item>
                           <ListGroup.Item className="border-0">
-                          <strong> <i className="bi bi-headset me-1"></i> Let us call you</strong> 
+                            <strong>
+                              {" "}
+                              <i className="bi bi-headset me-1"></i> Let us call
+                              you
+                            </strong>
                           </ListGroup.Item>
-                          <ListGroup.Item className="border-0"><i className="bi bi-calendar-check me-1"></i> <strong> Book Appointments</strong> </ListGroup.Item>
+                          <ListGroup.Item className="border-0">
+                            <i className="bi bi-calendar-check me-1"></i>{" "}
+                            <strong> Book Appointments</strong>{" "}
+                          </ListGroup.Item>
                         </ListGroup>
                       </Card.Body>
                     </Card>
@@ -281,36 +293,65 @@ const TourDetails = () => {
             </Tab.Container>
           </Row>
           <h2 className="mb-4">Check out the latest reviews on Instagram!</h2>
-      {/* Nhúng bài viết Instagram với kích thước tùy chỉnh */}
-    <div class="d-flex justify-content-around flex-wrap">
-    <div className="mw-100 my-1 mx-auto">
-        <blockquote className="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/p/DADYebQt1ze/?utm_source=ig_embed"
-          data-instgrm-captioned
-          data-instgrm-version="14"
-          style={{ background: '#FFF', border: '0', borderRadius: '3px', boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)', margin: '1px', maxWidth: '300px', width: '100%' }}>
-        </blockquote>
-      </div>
+          {/* Nhúng bài viết Instagram với kích thước tùy chỉnh */}
+          <div class="d-flex justify-content-around flex-wrap">
+            <div className="mw-100 my-1 mx-auto">
+              <blockquote
+                className="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/DADYebQt1ze/?utm_source=ig_embed"
+                data-instgrm-captioned
+                data-instgrm-version="14"
+                style={{
+                  background: "#FFF",
+                  border: "0",
+                  borderRadius: "3px",
+                  boxShadow:
+                    "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
+                  margin: "1px",
+                  maxWidth: "300px",
+                  width: "100%",
+                }}
+              ></blockquote>
+            </div>
 
-      <div className="mw-100 my-1 mx-auto">
-        <blockquote className="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/p/EXAMPLE2/"
-          data-instgrm-captioned
-          data-instgrm-version="14"
-          style={{ background: '#FFF', border: '0', borderRadius: '3px', boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)', margin: '1px', maxWidth: '300px', width: '100%' }}>
-        </blockquote>
-      </div>
+            <div className="mw-100 my-1 mx-auto">
+              <blockquote
+                className="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/EXAMPLE2/"
+                data-instgrm-captioned
+                data-instgrm-version="14"
+                style={{
+                  background: "#FFF",
+                  border: "0",
+                  borderRadius: "3px",
+                  boxShadow:
+                    "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
+                  margin: "1px",
+                  maxWidth: "300px",
+                  width: "100%",
+                }}
+              ></blockquote>
+            </div>
 
-      <div className="mw-100 my-1 mx-auto">
-        <blockquote className="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/p/DADYebQt1ze/?utm_source=ig_embed"
-          data-instgrm-captioned
-          data-instgrm-version="14"
-          style={{ background: '#FFF', border: '0', borderRadius: '3px', boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)', margin: '1px', maxWidth: '300px', width: '100%' }}>
-        </blockquote>
-      </div>
-      </div>
-      
+            <div className="mw-100 my-1 mx-auto">
+              <blockquote
+                className="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/DADYebQt1ze/?utm_source=ig_embed"
+                data-instgrm-captioned
+                data-instgrm-version="14"
+                style={{
+                  background: "#FFF",
+                  border: "0",
+                  borderRadius: "3px",
+                  boxShadow:
+                    "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
+                  margin: "1px",
+                  maxWidth: "300px",
+                  width: "100%",
+                }}
+              ></blockquote>
+            </div>
+          </div>
         </Container>
       </section>
     </>

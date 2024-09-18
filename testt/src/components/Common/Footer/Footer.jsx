@@ -41,7 +41,7 @@ const Footer = () => {
                 <NavLink to="/">About Us</NavLink>
               </ListGroup.Item>
               <ListGroup.Item>
-              <NavLink to="/News">News</NavLink>
+              <NavLink to="/news">News</NavLink>
               </ListGroup.Item>
               <ListGroup.Item>
               <NavLink to="/">Faq</NavLink>

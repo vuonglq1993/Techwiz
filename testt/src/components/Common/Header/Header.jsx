@@ -74,6 +74,9 @@ const Header = () => {
                   <NavLink className="nav-link" to="/about-us" onClick={closeMenu}>
                     ABOUT US
                   </NavLink>
+                  <NavLink className="nav-link" to="/news" onClick={closeMenu}>
+                    NEWS
+                  </NavLink>
                   <NavLink className="nav-link" to="/tours" onClick={closeMenu}>
                     TOURS
                   </NavLink>
