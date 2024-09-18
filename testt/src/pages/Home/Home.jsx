@@ -2,20 +2,22 @@ import React from "react";
 import Banner from "../../components/Banner/Banner";
 import AdvanceSearch from "../../components/AdvanceSearch/AdvanceSearch";
 import Features from "../../components/Features/Features";
-import { Container, Row, Col,  } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import "./home.css";
+import "../Home/home.css";
 
-
+import tour4 from "../../assets/images/tour/Tokyo.png";
+import tour5 from "../../assets/images/tour/bali-1.png";
+import tour6 from "../../assets/images/tour/bangkok.png";
+import tour7 from "../../assets/images/tour/cancun.png";
+import tour8 from "../../assets/images/tour/nah-trang.png";
+import tour9 from "../../assets/images/tour/phuket.png";
+import PopularPlace from "../../components/PopularPlace/PopularPlace";
 import Gallery from "../../components/Gallery/Gallery";
-import Cards from "../../components/Cards/Cards";
-import { destinationsData, popularsData } from "../../utils/data";
-import PopularCard from "../../components/Cards/PopularCard";
-
 
 const Home = () => {
   var settings = {
@@ -67,7 +69,68 @@ const Home = () => {
     ],
   };
 
-
+  const destinations = [
+    {
+      id: 0,
+      name: "Bali",
+      tours: "5 tours and activities",
+      image: tour5,
+      link: "tour-name",
+      shortDes: "",
+      link: "/tour",
+      location: "dehradun",
+    },
+    {
+      id: 1,
+      name: "Tokyo",
+      tours: "9 tours and activities",
+      image: tour4,
+      link: "tour-name",
+      shortDes: "",
+      link: "/tour",
+      location: "Rishikesh",
+    },
+    {
+      id: 2,
+      name: "Bangkok",
+      tours: "5 tours and activities",
+      image: tour6,
+      link: "tour-name",
+      shortDes: "",
+      link: "/tour",
+      location: "Mussoorie",
+    },
+    {
+      id: 3,
+      name: "Cancun",
+      tours: "4 tours and activities",
+      image: tour7,
+      link: "tour-name",
+      shortDes: "",
+      link: "/tour",
+      location: "Uttarkhashi",
+    },
+    {
+      id: 4,
+      name: "Nha Trang",
+      tours: "9 tours and activities ",
+      image: tour8,
+      link: "tour-name",
+      shortDes: "",
+      link: "/tour",
+      location: "Manali",
+    },
+    {
+      id: 5,
+      name: "Phuket",
+      tours: "4 tours and activities",
+      image: tour9,
+      link: "tour-name",
+      shortDes: "4 tours and activities",
+      link: "/tour",
+      location: "Haridwar",
+    },
+  ];
 
   return (
     <>
@@ -90,9 +153,21 @@ const Home = () => {
           <Row>
             <Col md="12">
               <Slider {...settings}>
-                {destinationsData.map((destination, inx) => {
+                {destinations.map((destination, inx) => {
                   return (
-                    <Cards destination={destination} key={inx} />
+                    <div className="img-box" key={inx}>
+                      <Card>
+                        <Card.Img
+                          variant="top"
+                          src={destination.image}
+                          className="img-fluid"
+                          alt={destination.name}
+                        />
+                        <Card.Title>{destination.name}</Card.Title>
+
+                        <span className="tours">{destination.tours}</span>
+                      </Card>
+                    </div>
                   );
                 })}
               </Slider>
@@ -103,26 +178,7 @@ const Home = () => {
 
       {/* tour seciton start */}
 
-      <section className="popular py-5">
-      <Container>
-        <Row>
-          <Col md="12">
-            <div className="main_heading">
-              <h1> Popular Activities </h1>
-            </div>
-          </Col>
-        </Row>
-        <Row>
-        {popularsData.map((val, inx)=>{
-          return(
-          <Col  md={3} sm={6} xs={12} className="mb-5" key={inx}>
-            <PopularCard val={val} />
-          </Col>
-        )
-        })}
-        </Row>
-      </Container>
-    </section>
+      <PopularPlace />
 
       <section className="call_us">
         <Container>

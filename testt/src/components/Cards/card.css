@@ -1,68 +1,5 @@
-.tours_section .img-box {
-    padding: 0px 12px;
-  }
-  
- .img-box .card {
-    border: none;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-  }
-  
- .img-box .card a {
-    border: none;
-  }
-  
- .img-box .card img {
-    transition: all 0.5s ease 0s;
-    filter: brightness(0.8);
-  }
-  
- .img-box .card .card-title {
-    position: absolute;
-    top: 5%;
-    left: 3%;
-    font-size: 16px;
-    color: var(--white);
-    line-height: 150%;
-    font-weight: bold;
-    width: 100%;
-  }
-  
- .img-box .card .tours {
-    position: absolute;
-    right: 5%;
-    bottom: 5%;
-    font-size: 16px;
-    color: var(--primaryClr);
-    line-height: 18px;
-    font-weight: 600;
-    padding: 6px 15px;
-    background: var(--white);
-    border-radius: 15px;
-    transform: translateX(120%);
-    transition: 0.2s ease-in;
-  }
-  
- .img-box .card:hover {
-    transition: 0.2 ease-in;
-  }
-  
- .img-box .card:hover img {
-    filter: brightness(1);
-    transform: scale(1.1);
-  }
-  
- .img-box .card:hover .tours {
-    transform: translateX(0);
-  }
-  
 
-
-
-
-
-.popular  {
+.popular {
     padding: 5px;
     border: none;
     transition: all 0.5s ease 0s;
@@ -92,7 +29,7 @@
     padding: 4px 8px;
     border-radius: 4px;
     margin-right: 8px;
-    font-size: 14px;
+    font-size: var(--bodyText);
 }
 
 
@@ -112,7 +49,7 @@
     color:#4f5e71 !important;
 }
 
-.popular  .card-body .Rail{
+.popular .card-body .Rail{
     background-color: #fc961b !important;
     color:#ffffff !important;
 }
@@ -122,7 +59,7 @@
     color:#ffffff !important;
 }
 
-.popular  .card-body .card-title{
+.popular .card-body .card-title{
     font-size: var(--bodyText);
     font-weight: bold;
     transition: all 0.5s ease 0s;
@@ -131,7 +68,7 @@
     
 }
 
-.popular  .card-body .card-text {
+.popular .card-body .card-text {
     font-size: 13px;
     padding: 10px 0px;
     line-height: 1.3em;
@@ -146,7 +83,7 @@
 }
 
 
-.popular  .card-body .text {
+.popular .card-body .text {
     margin-left: 16px;
     display: block;
     font-size: 13px;
@@ -178,5 +115,3 @@
 
 
 
-
-  
