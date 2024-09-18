@@ -22,6 +22,29 @@ const TourDetails = () => {
   useEffect(() => {
     document.title = " Tours  Details  ";
     window.scroll(0, 0);
+    // Kiểm tra nếu Instagram widget đã có trong DOM
+    const instagramEmbedScript = document.querySelector('script[src="//www.instagram.com/embed.js"]');
+
+    // Nếu không có script, tạo và chèn nó vào DOM
+    if (!instagramEmbedScript) {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = "//www.instagram.com/embed.js";
+
+      // Đảm bảo rằng hàm process được gọi khi script đã được tải xong
+      script.onload = () => {
+        if (window.instgrm) {
+          window.instgrm.Embeds.process();
+        }
+      };
+
+      document.body.appendChild(script);
+    } else {
+      // Nếu script đã có, kiểm tra và gọi lại hàm để re-render các Instagram embeds
+      if (window.instgrm) {
+        window.instgrm.Embeds.process();
+      }
+    }
   }, []);
   return (
     <>
@@ -257,6 +280,37 @@ const TourDetails = () => {
               </Row>
             </Tab.Container>
           </Row>
+          <h2 className="mb-4">Check out the latest reviews on Instagram!</h2>
+      {/* Nhúng bài viết Instagram với kích thước tùy chỉnh */}
+    <div class="d-flex justify-content-around flex-wrap">
+    <div className="mw-100 my-1 mx-auto">
+        <blockquote className="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/p/DADYebQt1ze/?utm_source=ig_embed"
+          data-instgrm-captioned
+          data-instgrm-version="14"
+          style={{ background: '#FFF', border: '0', borderRadius: '3px', boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)', margin: '1px', maxWidth: '300px', width: '100%' }}>
+        </blockquote>
+      </div>
+
+      <div className="mw-100 my-1 mx-auto">
+        <blockquote className="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/p/EXAMPLE2/"
+          data-instgrm-captioned
+          data-instgrm-version="14"
+          style={{ background: '#FFF', border: '0', borderRadius: '3px', boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)', margin: '1px', maxWidth: '300px', width: '100%' }}>
+        </blockquote>
+      </div>
+
+      <div className="mw-100 my-1 mx-auto">
+        <blockquote className="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/p/DADYebQt1ze/?utm_source=ig_embed"
+          data-instgrm-captioned
+          data-instgrm-version="14"
+          style={{ background: '#FFF', border: '0', borderRadius: '3px', boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)', margin: '1px', maxWidth: '300px', width: '100%' }}>
+        </blockquote>
+      </div>
+      </div>
+      
         </Container>
       </section>
     </>

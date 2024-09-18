@@ -3,6 +3,7 @@ import "../Footer/footer.css"
 import { Col, Container, Row ,ListGroup} from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
+
 const Footer = () => {
   const [visible, setVisible]=useState(false);
 
@@ -40,7 +41,7 @@ const Footer = () => {
                 <NavLink to="/">About Us</NavLink>
               </ListGroup.Item>
               <ListGroup.Item>
-              <NavLink to="/">News</NavLink>
+              <NavLink to="/News">News</NavLink>
               </ListGroup.Item>
               <ListGroup.Item>
               <NavLink to="/">Faq</NavLink>
