@@ -1,0 +1,2 @@
+react install
+npm install --legacy-peer-deps
