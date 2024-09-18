@@ -1,0 +1,44 @@
+<Container>
+                    <div className="d-flex flex-wrap">
+                        <div className="">
+                            <h1 className="h1">Bali Travel Guide</h1>
+
+                            {/* Sử dụng iframe để nhúng bài viết */}
+                            <a
+                                href="https://www.travelandleisure.com/travel-guide/bali"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            ><img className="w-50" src={img01} alt="bali titi" /></a>
+                            <p>
+                                Check out this travel guide for Bali on Travel & Leisure:{" "}
+                                <a
+                                    href="https://www.travelandleisure.com/travel-guide/bali"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Bali Travel Guide
+                                </a>
+                            </p>
+                        </div>
+                        <div className="">
+                            <h1 className="h2">The Best (and Worst) Times to Visit Vietnam, According to Experts</h1>
+
+                            {/* Sử dụng iframe để nhúng bài viết */}
+                            <a
+                                href="https://www.travelandleisure.com/best-times-to-visit-vietnam-8546761"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            ><img className="w-50" src={img04} alt="bali titi" /></a>
+                            <p>
+                                Here's when to visit Vietnam for sunny weather, lower prices, and excellent sightseeing:{" "}
+                                <a
+                                    href="https://www.travelandleisure.com/best-times-to-visit-vietnam-8546761"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Click here!
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </Container>
