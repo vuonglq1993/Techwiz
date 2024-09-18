@@ -2,7 +2,7 @@ import React from "react";
 import "../PopularPlace/popular-place.css";
 import {  Col, Container, Row, } from "react-bootstrap";
 
-import { popularsData } from "../utils/data";
+import { popularsData } from "../../utils/data";
 import ProductCard from "../Cards/ProductCard";
 
 const PopularPlace = () => {

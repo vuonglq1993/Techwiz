@@ -1,42 +1,46 @@
-import React from 'react'
-import { Row, Breadcrumb, Container } from "react-bootstrap";
+import React from "react";
+import "../Breadcrumbs/breadcrumbs.css";
 import { NavLink } from "react-router-dom";
-import "../Breadcrumbs/breadcrumbs.css"
+import { Breadcrumb, Container, Row } from "react-bootstrap";
+
+
 
 const Breadcrumbs = (props) => {
   return (
     <>
-           <div className="inner-banner-wrap">
-                <div className="inner-baner-container" >
-                    <div className="container">
-                        <div className="inner-banner-content">
-                            <h1 className="page-title fs-1">{props.title}</h1>
-                        </div>
-                    </div>
-                </div>
+      <div className="inner-banner-wrap">
+        <div className="inner-banner-container">
+          <Container>
+            <div className="inner-banner-content">
+              <h1 className="fs-1 text-white text-uppercase font-bold">
+                {" "}
+                {props.title}{" "}
+              </h1>
             </div>
-            <div className=" navbar-link ">
-                <Container>
-                    <Row>
-                        <Breadcrumb className="py-1 m-0 text-white">
-                            <li className='breadcrumb-item'>
-                            <i className="fad fa-home-alt me-1"></i> <NavLink to="/">   Home </NavLink>
-                            </li>
-
-                            <li className={`${props.named} text-white breadcrumb-item active`} >
-                                <NavLink to="#">   {props.pagename} </NavLink>
-                            </li>
-
-                            <li className={`${props.childnamed} text-white breadcrumb-item  active`} >
-                                <NavLink to="#" >    {props.childpagename} </NavLink>
-                            </li>
-
-                        </Breadcrumb>
-                    </Row>
-                </Container>
-            </div>
+          </Container>
+        </div>
+      </div>
+      <div className="navbar-link py-1">
+        <Container>
+          <Row>
+            <Breadcrumb>
+              <Breadcrumb.Item active>
+                <NavLink to="/">
+                  <i className="bi bi-house-door-fill me-1"></i> Home
+                </NavLink>
+              </Breadcrumb.Item>
+              <Breadcrumb.Item active>{props.pagename}</Breadcrumb.Item>
+              {props.childpagename ? (
+                <Breadcrumb.Item active>{props.childpagename}</Breadcrumb.Item>
+              ) : (
+                ""
+              )}
+            </Breadcrumb>
+          </Row>
+        </Container>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Breadcrumbs
+export default Breadcrumbs;

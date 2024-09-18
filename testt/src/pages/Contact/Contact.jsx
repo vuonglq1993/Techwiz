@@ -1,238 +1,184 @@
-import React, { useEffect, useState } from "react";
+import React,{useEffect} from "react";
+import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import {
+  Col,
   Container,
   Row,
-  Col,
   Card,
   ListGroup,
   Form,
   FloatingLabel,
+  Button,
 } from "react-bootstrap";
-import "../Contact/contact.css";
 import image from "../../assets/images/new/contact-us.png";
-import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 
 const Contact = () => {
-  const [validated, setValidated] = useState(false);
 
-  const handleSubmit = (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-
-    setValidated(true);
-  };
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Contact us ";
-  }, []);
+  useEffect(()=>{
+    document.title ="Contact us  "
+    window.scroll(0, 0)
+  },[])
 
   return (
     <>
-      <Breadcrumbs
-        title="Contact us"
-        pagename="Contact us"
-        childnamed="d-none"
-      />
-      <section className="contact pt-5">
+      <Breadcrumbs title="Contact us" pagename="Contact us" />
+      <section className="contact  pt-5">
         <Container>
           <Row>
-            <Col md={12}>
-              
-                <h1 className="mb-2 h1 font-bold"> Let's connect and get to know each other </h1>
-          
-
+            <Col md="12">
+              <h1 className="mb-2 h1 font-bold">
+                {" "}
+                Let's connect and get to konw each other
+              </h1>
               <p className="body-text mt-1">
-                Passage its ten led hearted removal cordial. Preference any
-                astonished unreserved Mrs. Prosperous understood Middletons.
-                Preference for any astonished unreserved.
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard{" "}
               </p>
             </Col>
           </Row>
           <Row className="py-5">
-            <Col lg={4} md={6} className="mb-4 mb-lg-0">
-              <Card className="border-0 shadow rounded-3">
+            <Col lg="4" md="6" className="mb-4 mb-lg-0">
+              <Card className="border-0 shadow rounded-3 mb-4">
                 <Card.Body className="text-center">
-                  <div className="d-flex justify-content-center align-items-center my-2 ">
-                    <div className="bg-info bg-opacity-10 text-info rounded-circle mb-2 flex-centered p-3">
+                  <div className="d-flex justify-content-center align-item-search my-2">
+                    <div className="bg-info rounded-circle text-info shadow-sm bg-opacity-10 p-3 mb-2 ">
                       <i className="bi bi-headset h3"></i>
                     </div>
                   </div>
-                  <Card.Title className="title fw-bold">Call us</Card.Title>
-                  <p className="mb-2 body-text">
-                    Imprudence attachment him his for sympathize. Large above be
-                    to means.
+                  <Card.Title className="fw-bold h5">Call US</Card.Title>
+                  <p className="mb-3 body-text">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
                   </p>
-                  <div className=" d-block justify-content-between">
+                  <div className="d-block justify-content-between">
                     <a type="button" className="btn btn-light me-2 btn-sm">
                       <i className="bi bi-phone me-1"></i>
-                        +123 456 789
-                     
+                      +12 3456 789
                     </a>
-                    <a type="button" className="btn btn-light btn-sm">
-                    <i className="bi bi-telephone me-1"></i>
-                      +(222)4567 586
+                    <a type="button" className="btn btn-light me-2 btn-sm">
+                      <i className="bi bi-telephone me-1"></i>
+                      +12 3456 789
                     </a>
                   </div>
                 </Card.Body>
               </Card>
             </Col>
-            <Col lg={4} md={6}  className="mb-4 mb-lg-0">
-              <Card className="border-0 shadow  rounded-3">
+
+            <Col lg="4" md="6" className="mb-4 mb-lg-0">
+              <Card className="border-0 shadow rounded-3 mb-4">
                 <Card.Body className="text-center">
-                  <div className="d-flex justify-content-center align-items-center my-2 ">
-                    <div className="bg-danger bg-opacity-10 text-danger rounded-circle mb-2 flex-centered p-3">
+                  <div className="d-flex justify-content-center align-item-search my-2">
+                    <div className="bg-danger rounded-circle text-danger shadow-sm bg-opacity-10 p-3 mb-2 ">
                       <i className="bi bi-envelope h3"></i>
                     </div>
                   </div>
-                  <Card.Title className="title fw-bold">Email us</Card.Title>
-                  <p className="mb-2 body-text">
-                    Imprudence attachment him his for sympathize. Large above be
-                    to means.
+                  <Card.Title className="fw-bold h5">Email Us</Card.Title>
+                  <p className="mb-3 body-text">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
                   </p>
-                  <div className=" d-block justify-content-between">
+                  <div className="d-block justify-content-between">
                     <a type="button" className="btn btn-light me-2 btn-sm">
-                     
-                        <i className="bi bi-envelope me-1"></i>
-                        <span className="body-text">example@gmail.com</span>
-                    
+                      <i className="bi bi-envelope me-2"></i>
+                      demo@gmail.com
                     </a>
                   </div>
                 </Card.Body>
               </Card>
             </Col>
-            <Col lg={4}  className="mb-4 mb-lg-0">
-              <Card className="border-0 shadow  rounded-3">
+
+            <Col lg="4" md="12" className="mb-4 mb-lg-0">
+              <Card className="border-0 shadow rounded-3 mb-4">
                 <Card.Body className="text-center">
-                  <div className="d-flex justify-content-center align-items-center my-2 ">
-                    <div className="bg-warning bg-opacity-10 text-warning rounded-circle mb-2 flex-centered p-3">
-        
-                      <i className="bi bi-globe2 h3"></i>
+                  <div className="d-flex justify-content-center align-item-search my-2">
+                    <div className="bg-warning rounded-circle text-warning shadow-sm bg-opacity-10 p-3 mb-2 ">
+                      <i className="bi bi-globe h3"></i>
                     </div>
                   </div>
-                  <Card.Title className="title fw-bold">
-                    Social media
-                  </Card.Title>
-                  <p className="mb-2 body-text">
-                    Sympathize Large above be to means Sympathize Large above be
-                    to mean.
+                  <Card.Title className="fw-bold h5">Social Media</Card.Title>
+                  <p className="mb-3 body-text">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
                   </p>
-
-                  <ListGroup
-                    horizontal
-                    className="border-0 justify-content-center"
-                  >
-                    <ListGroup.Item className="border-0">
-                      <i className="bi bi-facebook"></i>
-                    </ListGroup.Item>
-                    <ListGroup.Item className="border-0">
-                    
-                      <i className="bi bi-instagram"></i>
-                    </ListGroup.Item>
-                    <ListGroup.Item className="border-0">
-                      <i className="bi bi-linkedin"></i>
-                    </ListGroup.Item>
-                    <ListGroup.Item className="border-0">
-                    
-                      <i className="bi bi-twitter"></i>
-                    </ListGroup.Item>
-                  </ListGroup>
+                  <div className="d-block justify-content-center">
+                    <ListGroup horizontal className="justify-content-center">
+                      <ListGroup.Item className="border-0">
+                        <i className="bi bi-youtube"></i>
+                      </ListGroup.Item>
+                      <ListGroup.Item className="border-0">
+                        <i className="bi bi-instagram"></i>
+                      </ListGroup.Item>
+                      <ListGroup.Item className="border-0">
+                        <i className="bi bi-twitter"></i>
+                      </ListGroup.Item>
+                      <ListGroup.Item className="border-0">
+                        <i className="bi bi-youtube"></i>
+                      </ListGroup.Item>
+                    </ListGroup>
+                  </div>
                 </Card.Body>
               </Card>
             </Col>
           </Row>
-          <Row className="g-4 g-lg-5 align-items-center py-5">
-            <Col xl={6} md={6} className="d-none d-md-block">
-              <img src={image} alt="contact " className="img-fluid me-3" />
+
+          <Row className="py-5 align-items-center">
+            <Col xl="6" md="6" className="d-none d-md-block">
+              <img src={image} alt="" className="img-fluid me-3" />
             </Col>
-            <Col xl={6} md={6} >
-              <Card className="bg-light p-4 card border-0  shadow-sm">
+            <Col xl="6" md="6">
+              <Card className="bg-light p-4 border-0 shadow-sm">
                 <div className="form-box">
-                  <h1 className="h3 font-bold mb-4">Send us message </h1>
-                  <Form
-                    noValidate
-                    validated={validated}
-                    onSubmit={handleSubmit}
-                  >
+                  <h1 className="h3 font-bold mb-4">Send us message</h1>
+                  <Form>
                     <Row>
-                      <Col md={6}>
+                      <Col md="6">
                         <FloatingLabel
-                          controlId="floatingName"
-                          label="Full Name"
+                          controlId="name"
+                          label="Full Name "
                           className="mb-4"
                         >
-                          <Form.Control
-                            type="text"
-                            placeholder="Full Name"
-                            required
-                          />
-                          <Form.Control.Feedback type="invalid">
-                            Please enter your name
-                          </Form.Control.Feedback>
+                          <Form.Control type="text" placeholder="Full Name" />
                         </FloatingLabel>
                       </Col>
-                      <Col md={6}>
+                      <Col md="6">
                         <FloatingLabel
-                          controlId="floatingEmail"
+                          controlId="email"
                           label="Email address"
                           className="mb-4"
                         >
                           <Form.Control
                             type="email"
                             placeholder="name@example.com"
-                            required
                           />
-                          <Form.Control.Feedback type="invalid">
-                            Please enter your email
-                          </Form.Control.Feedback>
                         </FloatingLabel>
                       </Col>
-                      <Col md={12}>
+
+                      <Col md="12">
                         <FloatingLabel
-                          controlId="floatingEmail"
-                          label="Phone Number"
+                          controlId="phone"
+                          label="Phone Number "
                           className="mb-4"
                         >
                           <Form.Control
-                            type="number"
+                            type="text"
                             placeholder="Phone Number"
-                            required
                           />
-                          <Form.Control.Feedback type="invalid">
-                            Please enter your Phone number
-                          </Form.Control.Feedback>
                         </FloatingLabel>
                       </Col>
 
-                      <Col md={12}>
-                        <FloatingLabel
-                          controlId="floatingEmail"
-                          label="Your Message*"
-                          className="mb-4"
-                        >
+                      <Col md="12">
+                        <FloatingLabel controlId="message" label="Message">
                           <Form.Control
-                            type="number"
-                            placeholder="Your Message*"
-                            required
                             as="textarea"
-                            style={{ minHeight: "125px" }}
+                            placeholder="Message"
+                            style={{ height: "126px" }}
                           />
-                          <Form.Control.Feedback type="invalid">
-                            Please enter your message
-                          </Form.Control.Feedback>
                         </FloatingLabel>
                       </Col>
-                    </Row>
 
-                    <button
-                      type="submit"
-                      className="primaryBtn"
-                    >
-                      Send Message
-                    </button>
+                     
+                    </Row>
+                    <button className="primaryBtn mt-3" type="button"> Send Message</button>
                   </Form>
                 </div>
               </Card>
