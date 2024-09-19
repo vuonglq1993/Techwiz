@@ -79,7 +79,7 @@ const News = () => {
                   {" "}
                   <img
                     src={article.img}
-                    className="card-img-top"
+                    className="card-img-top img-fluid"
                     alt={article.title}
                   />{" "}
                   <div className="card-body flex-grow-1">
