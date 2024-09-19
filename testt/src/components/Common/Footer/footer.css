@@ -1,81 +1,71 @@
-footer {
-  background: black;
-
+.footer-section {
+  background-color: #0b0b40; /* Dark background */
+  padding: 40px 0;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
-footer h4 {
-  font-size: var(--subTitle);
-  color: whitesmoke;
-  line-height: 150%;
+.footer_col h4 {
+  font-size: 18px;
   font-weight: bold;
-  padding: 0 0 18px 0;
-  margin: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
-footer p,
-footer a,
-footer i,
-footer span,
-footer .copyright  {
-  margin: 0;
-  font-size: var(--bodyText);
-  color: whitesmoke;
-  line-height: 150%;
-  font-weight: bold;
+.footer_col .list-group-item {
+  background: transparent;
+  border: none;
+  padding: 5px 0;
+}
+
+.footer_col .list-group-item a {
+  color: #b8b8d4;
   text-decoration: none;
 }
 
-footer .quick_link .list-group .list-group-item {
-  background: none;
-  padding: 0;
-  margin-bottom: 5px;
-  font-size: var(--bodyText);
-  line-height: 150%;
-  color: #b4b4b4;
-  font-weight: bold;
-  border: none;
+.footer_col .list-group-item a:hover {
+  color: #ffffff;
 }
 
-footer .quick_link .list-group .list-group-item:hover a {
-  color: var(--white);
+/* Footer bottom content */
+.footer_bottom {
+  border-top: 1px solid #fff;
+  padding-top: 20px;
+  margin-top: 20px;
 }
 
-footer .quick_link .list-group .list-group-item:first-child {
-  padding-top: 0;
+.footer_language_select_wrapper {
+  margin-bottom: 0; /* Đảm bảo căn chỉnh */
 }
 
-footer .location .d-flex {
-  margin-bottom: 5px;
+.footer_language_select {
+  background-color: #ffffff; /* Nền trắng */
+  border: 1px solid #000;
+  color: black;
+  padding: 5px;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-footer .bdr {
-    border-top: 1px solid #f5f5f578;
+/* Center the copyright text */
+.copyright p {
+  margin: 0;
+  font-size: 16px; /* Tăng cỡ chữ đoạn bản quyền */
+  color: #b8b8d4;
 }
 
-
-#back-top{
-    opacity: 0;
-    z-index: 99999;
-    font-size: 26px;
-    color:white;
-    line-height: 47px;
-    text-align: center;
-    position: fixed;
-    right: 20px;
-    bottom: 50px;
-    width: 45px;
-    height: 45px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.6s ease;
-    transform: translateY(40px);
-    background: var(--primaryClr);
-
-
+/* Align the social icons */
+.footer_social_icons a {
+  color: white;
+  font-size: 22px; /* Tăng kích thước biểu tượng mạng xã hội */
+  margin-left: 15px;
+  text-decoration: none;
 }
 
-#back-top.active{
-    opacity: 1;
-    transition: all 0.6s ease;
-    transform: translateY(-20px);
+.footer_social_icons a:hover {
+  color: #ffda79;
 }
