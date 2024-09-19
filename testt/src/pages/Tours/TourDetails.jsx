@@ -32,7 +32,6 @@ const TourDetails = () => {
 
     // Kiểm tra các trường có được nhập hay không (bắt buộc)
     if (firstName && lastName && email && comment) {
-      // Thêm bình luận mới vào danh sách bình luận
       const newComment = {
         firstName,
         lastName,
@@ -40,8 +39,6 @@ const TourDetails = () => {
         comment,
       };
       setComments([...comments, newComment]);
-
-      // Xóa nội dung các input sau khi gửi
       setFirstName("");
       setLastName("");
       setEmail("");
@@ -338,7 +335,7 @@ const TourDetails = () => {
                                 className="form-control"
                                 value={firstName}
                                 onChange={(e) => setFirstName(e.target.value)}
-                                required // Trường bắt buộc
+                                required
                                 placeholder="Enter your first name"
                               />
                             </div>
@@ -353,7 +350,7 @@ const TourDetails = () => {
                                 className="form-control"
                                 value={lastName}
                                 onChange={(e) => setLastName(e.target.value)}
-                                required // Trường bắt buộc
+                                required
                                 placeholder="Enter your last name"
                               />
                             </div>
@@ -370,7 +367,7 @@ const TourDetails = () => {
                               className="form-control"
                               value={email}
                               onChange={(e) => setEmail(e.target.value)}
-                              required // Trường bắt buộc
+                              required
                               placeholder="Enter your email"
                             />
                           </div>
@@ -386,7 +383,7 @@ const TourDetails = () => {
                               rows="3"
                               value={comment}
                               onChange={(e) => setComment(e.target.value)}
-                              required // Trường bắt buộc
+                              required
                               placeholder="Write your review here..."
                             ></textarea>
                           </div>
