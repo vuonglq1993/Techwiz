@@ -1,0 +1,75 @@
+.overfooter-section{
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+.footer-section {
+  background-color: #0b0b40; /* Dark background */
+  padding: 40px 0;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.footer_col h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer_col .list-group-item {
+  background: transparent;
+  border: none;
+  padding: 5px 0;
+}
+
+.footer_col .list-group-item a {
+  color: #b8b8d4;
+  text-decoration: none;
+}
+
+.footer_col .list-group-item a:hover {
+  color: #ffffff;
+}
+
+/* Footer bottom content */
+.footer_bottom {
+  border-top: 1px solid #fff;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.footer_language_select_wrapper {
+  margin-bottom: 0; /* Đảm bảo căn chỉnh */
+}
+
+.footer_language_select {
+  background-color: #ffffff; /* Nền trắng */
+  border: 1px solid #000;
+  color: black;
+  padding: 5px;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Center the copyright text */
+.copyright p {
+  margin: 0;
+  font-size: 16px; /* Tăng cỡ chữ đoạn bản quyền */
+  color: #b8b8d4;
+}
+
+/* Align the social icons */
+.footer_social_icons a {
+  color: white;
+  font-size: 22px; /* Tăng kích thước biểu tượng mạng xã hội */
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.footer_social_icons a:hover {
+  color: #ffda79;
+}

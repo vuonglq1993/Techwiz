@@ -18,6 +18,8 @@
 
 .react-datepicker-wrapper{
     width: 100%;
+<<<<<<< HEAD
+=======
 }
 
 .popup {
@@ -51,4 +53,5 @@
 
 .popup .close-btn:hover {
     background-color: darkred;
+>>>>>>> origin/main
 }
