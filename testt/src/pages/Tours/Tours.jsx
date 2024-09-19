@@ -25,7 +25,7 @@ const Tours = () => {
             <Col xl="3" lg="4" md="12" sm="12">
             <div className="d-lg-none d-block">
                     <button className="primaryBtn mb-4" onClick={handleShow}>
-                       <i className="bi bi-funnel"></i> Filters
+                      <i className="bi bi-funnel"></i> Filters
                     </button>
             </div>
             <div className="filters d-lg-block d-none">
