@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* sticky menu  */
 
 .is-sticky {
@@ -108,4 +109,46 @@ header .navbar .offcanvas-body .dropdown-menu .dropdown-item {
 
 
 
+=======
+.header-section {
+  background-color: #1e3d92; 
+  padding: 15px 0;
+}
+
+.logo {
+  max-height: 50px;
+}
+
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: #c2d9ff; 
+}
+
+.primaryBtn {
+  background-color: #31d3ff;
+  color: white; 
+  border: 1px solid #00b4d8;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px; 
+}
+
+.primaryBtn:hover {
+  background-color: #0077b6; 
+  border-color: #0077b6;
+  color: white;
+>>>>>>> origin/main
 }
