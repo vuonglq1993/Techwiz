@@ -32,11 +32,11 @@ const AdvanceSearch = () => {
                     label="Location"
                     onSelect={selectedLocation}
                     options={[
-                      "USA, Turkish",
-                      "Tokyo, Japan",
-                      "Sydney, Australia",
-                      "Melbourne, Australia",
-                      "Paris, France",
+                      "Dinh Doc Lap",
+                      "Ho Ba Mau, Ha Noi",
+                      "Phu Ket, Thailand",
+                      "Vinh Ha Long",
+                      "Lang Co, Hue",
                     ]}
                   />
                 </div>

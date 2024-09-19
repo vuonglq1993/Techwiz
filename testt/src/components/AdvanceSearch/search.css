@@ -36,7 +36,6 @@
 .react-datepicker__input-container{
     font-family: bootstrap-icons !important;
     font-style: normal;
-    font-weight: 400 !important;
     font-variant: normal;
     text-transform: none;
     line-height: 1;
@@ -88,7 +87,6 @@
     font-size: var(--bodyText);
     line-height: 22px;
     color:var(--textClr);
-    font-weight: bold;
     margin-bottom: 5px;
     display: block;
 }
@@ -105,7 +103,6 @@
     width: fit-content;
     display: flex;
     border:none;
-    font-weight: bold;
 }
 .box-search-advance .box-search .item-search .primaryBtn:hover{
     background-color: var(--primaryClr);
