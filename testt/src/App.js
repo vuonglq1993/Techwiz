@@ -6,7 +6,6 @@ import Footer from "./components/Common/Footer/Footer";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Tours from "./pages/Tours/Tours";
-import Tour from "./pages/FakeSearch/Tours";
 import TourDetails from "./pages/Tours/TourDetails";
 import Booking from "./pages/Booking/Booking";
 import Destinations from "./pages/Destinations/Destinations";

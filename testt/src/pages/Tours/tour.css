@@ -68,7 +68,7 @@
 }
 
 .tour_details .nav_bars {
-    background-color: #f14b361a;
+    background-color: #31d3ff;
     padding: 8px;
 }
 
@@ -87,7 +87,7 @@
 
 .tour_details .nav-pills .nav-link.active, .tour_details .nav-pills .show>.nav-link{
     color: white;
-    background-color: var(--primaryClr);
+    background-color: #00b3e4;
 }
 
 .tour_details  .list-group-item  {
