@@ -101,6 +101,9 @@ const Header = () => {
               <Nav className="justify-content-center flex-grow-1 pe-3">
                 <NavLink className="nav-link" to="/" onClick={closeMenu}>Home</NavLink>
                 <NavLink className="nav-link" to="/about-us" onClick={closeMenu}>ABOUT US</NavLink>
+                  <NavLink className="nav-link" to="/news" onClick={closeMenu}>
+                    NEWS
+                  </NavLink>
                 <NavLink className="nav-link" to="/tours" onClick={closeMenu}>TOURS</NavLink>
                 <NavLink className="nav-link" to="/top-place" onClick={closeMenu}>TOP PLACE</NavLink>
 >>>>>>> origin/main

@@ -1,2 +1,5 @@
 react install
 npm install --force
+
+npm install --force stream timers
+npm install --force axios xml2js

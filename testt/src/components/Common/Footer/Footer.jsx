@@ -119,6 +119,7 @@ import "../Footer/footer.css";
 import { Col, Container, Row, ListGroup } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
+
 const Footer = () => {
   return (
     <footer className="footer-section">
@@ -131,7 +132,7 @@ const Footer = () => {
                 <NavLink to="/">About TravelSmart</NavLink>
               </ListGroup.Item>
               <ListGroup.Item>
-                <NavLink to="/">News</NavLink>
+                <NavLink to="/news">News</NavLink>
               </ListGroup.Item>
               <ListGroup.Item>
                 <NavLink to="/">Reviews</NavLink>

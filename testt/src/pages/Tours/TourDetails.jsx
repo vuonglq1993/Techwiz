@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect, useState } from "react";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import "../Tours/tour.css";
 import { tourDetails } from "../../utils/data";
@@ -15,13 +15,66 @@ import {
   Accordion,
   Card,
   Stack,
+  TabPane,
 } from "react-bootstrap";
 
 const TourDetails = () => {
+  // State quản lý các giá trị input
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [comment, setComment] = useState("");
+  const [comments, setComments] = useState([]);
 
+  // Hàm xử lý khi người dùng gửi bình luận
+  const handleCommentSubmit = (e) => {
+    e.preventDefault();
+
+    // Kiểm tra các trường có được nhập hay không (bắt buộc)
+    if (firstName && lastName && email && comment) {
+      // Thêm bình luận mới vào danh sách bình luận
+      const newComment = {
+        firstName,
+        lastName,
+        email,
+        comment,
+      };
+      setComments([...comments, newComment]);
+
+      // Xóa nội dung các input sau khi gửi
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setComment("");
+    } else {
+      alert("Please fill in all fields.");
+    }
+  };
   useEffect(() => {
     document.title = " Tours  Details  ";
     window.scroll(0, 0);
+
+    const instagramEmbedScript = document.querySelector(
+      'script[src="//www.instagram.com/embed.js"]'
+    );
+
+    if (!instagramEmbedScript) {
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = "//www.instagram.com/embed.js";
+
+      script.onload = () => {
+        if (window.instgrm) {
+          window.instgrm.Embeds.process();
+        }
+      };
+
+      document.body.appendChild(script);
+    } else {
+      if (window.instgrm) {
+        window.instgrm.Embeds.process();
+      }
+    }
   }, []);
   return (
     <>
@@ -42,7 +95,11 @@ const TourDetails = () => {
               showPlayButton={false}
             />
 
-            <Tab.Container id="left-tabs-example" defaultActiveKey="1">
+            <Tab.Container
+              id="left-tabs-example"
+              defaultActiveKey="1"
+              classname=""
+            >
               <Row className="py-5">
                 <Col md={8} className="mb-3 mb-md-0">
                   <Col md={12}>
@@ -64,6 +121,9 @@ const TourDetails = () => {
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link eventKey="4">Location </Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="5">Reviews </Nav.Link>
                       </Nav.Item>
                     </Nav>
                   </Col>
@@ -189,6 +249,154 @@ const TourDetails = () => {
                         ></iframe>
                       </div>
                     </Tab.Pane>
+                    <Tab.Pane eventKey="5">
+                      <div class="d-flex justify-content-around flex-wrap mb-4 mt-3">
+                        <div className="mw-100 my-1 mx-auto">
+                          <blockquote
+                            className="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/p/CxXT6isCJ2W/"
+                            data-instgrm-version="14"
+                            style={{
+                              background: "#FFF",
+                              border: "0",
+                              borderRadius: "3px",
+                              boxShadow:
+                                "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
+                              margin: "1px",
+                              maxWidth: "300px",
+                              width: "100%",
+                            }}
+                          ></blockquote>
+                        </div>
+
+                        <div className="mw-100 my-1 mx-auto">
+                          <blockquote
+                            className="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/p/C8ylzLqs_Xt/"
+                            data-instgrm-version="14"
+                            style={{
+                              background: "#FFF",
+                              border: "0",
+                              borderRadius: "3px",
+                              boxShadow:
+                                "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
+                              margin: "1px",
+                              maxWidth: "300px",
+                              width: "100%",
+                            }}
+                          ></blockquote>
+                        </div>
+
+                        <div className="mw-100 my-1 mx-auto">
+                          <blockquote
+                            className="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/p/DADYebQt1ze/?utm_source=ig_embed"
+                            data-instgrm-version="14"
+                            style={{
+                              background: "#FFF",
+                              border: "0",
+                              borderRadius: "3px",
+                              boxShadow:
+                                "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
+                              margin: "1px",
+                              maxWidth: "300px",
+                              width: "100%",
+                            }}
+                          ></blockquote>
+                        </div>
+                        <div className="mw-100 my-1 mx-auto">
+                          <blockquote
+                            className="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/p/C8rWSEmpXKc/"
+                            data-instgrm-version="14"
+                            style={{
+                              background: "#FFF",
+                              border: "0",
+                              borderRadius: "3px",
+                              boxShadow:
+                                "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
+                              margin: "1px",
+                              maxWidth: "300px",
+                              width: "100%",
+                            }}
+                          ></blockquote>
+                        </div>
+                      </div>
+                      <Row>
+                        <h1 className="h3 mb-2">Post your own comment</h1>
+
+                        <form onSubmit={handleCommentSubmit} className="border rounded">
+                          {/* First Name và Last Name trên cùng một dòng */}
+                          <div className="row pt-4">
+                            <div className="col-md-6 mb-3">
+                              <label htmlFor="firstName" className="form-label">
+                                First Name
+                              </label>
+                              <input
+                                type="text"
+                                id="firstName"
+                                className="form-control"
+                                value={firstName}
+                                onChange={(e) => setFirstName(e.target.value)}
+                                required // Trường bắt buộc
+                                placeholder="Enter your first name"
+                              />
+                            </div>
+
+                            <div className="col-md-6 mb-3">
+                              <label htmlFor="lastName" className="form-label">
+                                Last Name
+                              </label>
+                              <input
+                                type="text"
+                                id="lastName"
+                                className="form-control"
+                                value={lastName}
+                                onChange={(e) => setLastName(e.target.value)}
+                                required // Trường bắt buộc
+                                placeholder="Enter your last name"
+                              />
+                            </div>
+                          </div>
+
+                          {/* Email trên dòng riêng */}
+                          <div className="mb-3">
+                            <label htmlFor="email" className="form-label">
+                              Email
+                            </label>
+                            <input
+                              type="email"
+                              id="email"
+                              className="form-control"
+                              value={email}
+                              onChange={(e) => setEmail(e.target.value)}
+                              required // Trường bắt buộc
+                              placeholder="Enter your email"
+                            />
+                          </div>
+
+                          {/* Comment trên dòng riêng */}
+                          <div className="mb-3">
+                            <label htmlFor="comment" className="form-label">
+                              Comment
+                            </label>
+                            <textarea
+                              id="comment"
+                              className="form-control"
+                              rows="3"
+                              value={comment}
+                              onChange={(e) => setComment(e.target.value)}
+                              required // Trường bắt buộc
+                              placeholder="Write your review here..."
+                            ></textarea>
+                          </div>
+
+                          <button type="submit" className="btn btn-primary mb-3">
+                            Submit
+                          </button>
+                        </form>
+                      </Row>
+                    </Tab.Pane>
                   </Tab.Content>
                 </Col>
 
@@ -227,7 +435,10 @@ const TourDetails = () => {
                           <h5 className="h6"> ({tourDetails.reviews})</h5>
                         </div>
 
-                        <NavLink to="/booking" className="primaryBtn w-100 d-flex justify-content-center fw-bold">
+                        <NavLink
+                          to="/booking"
+                          className="primaryBtn w-100 d-flex justify-content-center fw-bold"
+                        >
                           Book Now
                         </NavLink>
                       </Card.Body>
@@ -238,17 +449,25 @@ const TourDetails = () => {
                         <h1 className="font-bold mb-2 h3">Need Help ?</h1>
 
                         <ListGroup>
-                         
                           <ListGroup.Item className="border-0">
-                          <i className="bi bi-telephone me-1"></i>  Call us on: <strong>+91 123 456 789</strong>
+                            <i className="bi bi-telephone me-1"></i> Call us on:{" "}
+                            <strong>+91 123 456 789</strong>
                           </ListGroup.Item>
                           <ListGroup.Item className="border-0">
-                          <i className="bi bi-alarm me-1"></i> Timing: <strong>10AM to 7PM</strong>
+                            <i className="bi bi-alarm me-1"></i> Timing:{" "}
+                            <strong>10AM to 7PM</strong>
                           </ListGroup.Item>
                           <ListGroup.Item className="border-0">
-                          <strong> <i className="bi bi-headset me-1"></i> Let us call you</strong> 
+                            <strong>
+                              {" "}
+                              <i className="bi bi-headset me-1"></i> Let us call
+                              you
+                            </strong>
                           </ListGroup.Item>
-                          <ListGroup.Item className="border-0"><i className="bi bi-calendar-check me-1"></i> <strong> Book Appointments</strong> </ListGroup.Item>
+                          <ListGroup.Item className="border-0">
+                            <i className="bi bi-calendar-check me-1"></i>{" "}
+                            <strong> Book Appointments</strong>{" "}
+                          </ListGroup.Item>
                         </ListGroup>
                       </Card.Body>
                     </Card>
