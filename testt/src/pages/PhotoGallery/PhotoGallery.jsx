@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Gallery from "../../components/Gallery/Gallery";
+import AdvanceSearch from "../../components/AdvanceSearch/AdvanceSearch";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 
 const PhotoGallery = () => {
@@ -10,18 +11,19 @@ const PhotoGallery = () => {
   }, []);
 
   return (
-    <>
-      <Breadcrumbs title="Gallery" pagename="Gallery" />
-      <section className="py-5" style={{ overflow: "hidden" }}>
-        <Container>
-          <Row>
-            <Col>
-              <Gallery />
-            </Col>
-          </Row>
-        </Container>
-      </section>
-    </>
+      <>
+          <Breadcrumbs title="Gallery" pagename="Gallery" />
+          <AdvanceSearch />
+          <section className="py-5" style={{ overflow: "hidden" }}>
+              <Container>
+                  <Row>
+                      <Col>
+                          <Gallery />
+                      </Col>
+                  </Row>
+              </Container>
+          </section>
+      </>
   );
 };
 
