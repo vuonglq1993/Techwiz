@@ -15,14 +15,14 @@ const Destinations = () => {
   };
 
   useEffect(()=>{
-    document.title =" Destinations  "
+    document.title =" Top Places  "
     window.scroll(0, 0)
   },[])
 
 
   return (
     <>
-        <Breadcrumbs title="Destinations" pagename="Destinations" />
+        <Breadcrumbs title="Top Places" pagename="top-places" />
 
         <section className='py-5'>
             <Container>
