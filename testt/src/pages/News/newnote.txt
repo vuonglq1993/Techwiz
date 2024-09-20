@@ -11,4 +11,4 @@ https://www.colorhexa.com/
 
 3. tương tự trang tour sẽ cần chuyển trang và 1 trang nữa k cần tính năng
 
-4. T tưởng có trang news rồi cơ mà sao đây chưa có? có thì cập nhật lại và thêm 4 bài viết cho đủ 6
+4. T tưởng có trang news rồi cơ mà sao đây chưa có? có thì cập nhật lại và thêm 4 bài viết cho đủ 6 *
