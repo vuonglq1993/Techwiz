@@ -1,6 +1,5 @@
 {
   "homepage": "https://vuonglq1993.github.io/Techwiz/",
-
   "name": "travel-app",
   "version": "0.1.0",
   "private": true,
@@ -17,6 +16,7 @@
     "react-dom": "^18.3.1",
     "react-image-gallery": "^1.3.0",
     "react-lightbox-gallery": "2.0.1",
+    "react-paginate": "^8.2.0",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.2",
@@ -33,8 +33,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-"deploy": "gh-pages -d build"
-
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -54,5 +53,4 @@
       "last 1 safari version"
     ]
   }
-
 }

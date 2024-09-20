@@ -1,3 +1,5 @@
+import { Pagination } from "react-bootstrap";
+
 // destinations img
 import tour4 from "../assets/images/tour/Tokyo.png";
 import tour5 from "../assets/images/tour/bali-1.png";
@@ -27,6 +29,7 @@ import image5 from "../assets/images/new/5.jpg";
 import image6 from "../assets/images/new/6.jpg";
 import image7 from "../assets/images/new/7.jpg";
 import image8 from "../assets/images/new/8.jpg";
+
 
 export const destinationsData = [
   {
@@ -86,6 +89,20 @@ export const destinationsData = [
     name: "Malaysia",
     tours: "4 tours and activities",
     image: tour11,
+    link: "tour-name",
+  },
+  {
+    id: 8,
+    name: "Anchorage",
+    tours: "5 tours and activities",
+    image: tour6,
+    link: "tour-name",
+  },
+  {
+    id: 9,
+    name: "Santiago",
+    tours: "4 tours and activities",
+    image: tour5,
     link: "tour-name",
   },
 ];

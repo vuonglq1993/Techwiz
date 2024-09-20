@@ -24,7 +24,6 @@ const Header = () => {
   };
 
 
-
   const closeMenu = () => {
     if (window.innerWidth <= 991) {
       setOpen(false);
@@ -60,7 +59,8 @@ const Header = () => {
                 <NavLink className="nav-link" to="/" onClick={closeMenu}>Home</NavLink>
                 <NavLink className="nav-link" to="/about-us" onClick={closeMenu}>ABOUT US</NavLink>
                 <NavLink className="nav-link" to="/tours" onClick={closeMenu}>TOURS</NavLink>
-                <NavLink className="nav-link" to="/top-place" onClick={closeMenu}>TOP PLACE</NavLink>
+                <NavLink className="nav-link" to="/news" onClick={closeMenu}>NEWS</NavLink>
+                <NavLink className="nav-link" to="/top-places" onClick={closeMenu}>TOP PLACES</NavLink>
                 <NavLink className="nav-link" to="/gallery" onClick={closeMenu}>GALLERY</NavLink>
                 <NavLink className="nav-link" to="/contact-us" onClick={closeMenu}>CONTACT</NavLink>
               </Nav>

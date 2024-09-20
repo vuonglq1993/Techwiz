@@ -8,7 +8,7 @@ import Contact from "./pages/Contact/Contact";
 import Tours from "./pages/Tours/Tours";
 import TourDetails from "./pages/Tours/TourDetails";
 import Booking from "./pages/Booking/Booking";
-import Destinations from "./pages/Destinations/Destinations";
+import TopPalces from "./pages/Destinations/Destinations";
 import PhotoGallary from "./pages/PhotoGallery/PhotoGallery";
 import PhotoGallery from "./pages/PhotoGallery/PhotoGallery";
 import News from "./pages/News/News";
@@ -24,7 +24,7 @@ function App() {
         <Route path="tours" element={<Tours />} />
         <Route path="tour-details" element={<TourDetails />} />
         <Route path="booking" element={<Booking />} />
-        <Route path="destinations" element={<Destinations />} />
+        <Route path="top-places" element={<TopPalces />} />
         <Route path="gallery" element={<PhotoGallery />} />
         <Route path ="News" element={<News />} />
       </Routes>
