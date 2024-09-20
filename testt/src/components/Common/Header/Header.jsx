@@ -8,7 +8,7 @@ import {
 } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import BookingModal from "../../Booking Modal/BookingModal";
-// import logo from "../../assets/images/logo.png"; // Đường dẫn logo của bạn
+import logo from "../../../assets/images/logo/Logo.png";
 import "../Header/header.css";
 
 const Header = () => {
@@ -32,12 +32,11 @@ const Header = () => {
 
   return (
     <header className="header-section">
-      <Container>
-        <Navbar expand="lg" className="p-0">
+        <Navbar expand="lg" className="p-0 d-flex justify-content-between align-items-center">
           {/* Logo Section */}
           <Navbar.Brand>
             <NavLink to="/">
-              <img src="#" alt="Travel Smart" className="logo" />
+              <img src={logo} alt="Travel Smart" className="logo" />
             </NavLink>
           </Navbar.Brand>
           {/* End Logo Section */}
@@ -50,7 +49,7 @@ const Header = () => {
             show={open}
           >
             <Offcanvas.Header>
-              <h1 className="logo">Weekendmonks</h1>
+              <h1 className="logo">TravelSmart</h1>
               <span className="navbar-toggler ms-auto" onClick={toggleMenu}>
                 <i className="bi bi-x-lg"></i>
               </span>
@@ -59,9 +58,6 @@ const Header = () => {
               <Nav className="justify-content-center flex-grow-1 pe-3">
                 <NavLink className="nav-link" to="/" onClick={closeMenu}>Home</NavLink>
                 <NavLink className="nav-link" to="/about-us" onClick={closeMenu}>ABOUT US</NavLink>
-                  <NavLink className="nav-link" to="/news" onClick={closeMenu}>
-                    NEWS
-                  </NavLink>
                 <NavLink className="nav-link" to="/tours" onClick={closeMenu}>TOURS</NavLink>
                 <NavLink className="nav-link" to="/top-place" onClick={closeMenu}>TOP PLACE</NavLink>
                 <NavLink className="nav-link" to="/gallery" onClick={closeMenu}>GALLERY</NavLink>
@@ -72,7 +68,7 @@ const Header = () => {
           {/* End Navbar Links */}
 
           {/* Book Now Button */}
-          <div className="ms-md-4 ms-2">
+          <div className="ms-md-4 ms-2 book-now-btn">
             <NavLink className="primaryBtn d-none d-sm-inline-block" onClick={toggleModal}>
               Book Now
             </NavLink>
@@ -83,7 +79,6 @@ const Header = () => {
             <i className={open ? "bi bi-x-lg" : "bi bi-list"} onClick={toggleMenu}></i>
           </li>
         </Navbar>
-      </Container>
 
       {/* Modal Đặt Tour */}
       <BookingModal isOpen={isModalOpen} toggle={toggleModal} />

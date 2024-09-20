@@ -2,15 +2,14 @@ import React from "react";
 import Banner from "../../components/Banner/Banner";
 import AdvanceSearch from "../../components/AdvanceSearch/AdvanceSearch";
 import Features from "../../components/Features/Features";
-import { Container, Row, Col,  } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import "./home.css";
-
-
+import Footerapp from "../../assets/images/footerapp/footerapp.png";
 import Gallery from "../../components/Gallery/Gallery";
 import Cards from "../../components/Cards/Cards";
 import { destinationsData, popularsData } from "../../utils/data";
@@ -67,22 +66,18 @@ const Home = () => {
     ],
   };
 
-
-
   return (
     <>
       <Banner />
       <AdvanceSearch />
       <Features />
 
-      {/* tour seciton start */}
-
       <section className="tours_section slick_slider">
         <Container>
           <Row>
             <Col md="12">
               <div className="main_heading">
-                <h1> Top Destination For Your Next Vacation </h1>
+                <p className="fs-2 text-uppercase"> Top places</p>
               </div>
             </Col>
           </Row>
@@ -91,9 +86,7 @@ const Home = () => {
             <Col md="12">
               <Slider {...settings}>
                 {destinationsData.map((destination, inx) => {
-                  return (
-                    <Cards destination={destination} key={inx} />
-                  );
+                  return <Cards destination={destination} key={inx} />;
                 })}
               </Slider>
             </Col>
@@ -101,28 +94,26 @@ const Home = () => {
         </Container>
       </section>
 
-      {/* tour seciton start */}
-
       <section className="popular py-5">
-      <Container>
-        <Row>
-          <Col md="12">
-            <div className="main_heading">
-              <h1> Popular Activities </h1>
-            </div>
-          </Col>
-        </Row>
-        <Row>
-        {popularsData.map((val, inx)=>{
-          return(
-          <Col  md={3} sm={6} xs={12} className="mb-5" key={inx}>
-            <PopularCard val={val} />
-          </Col>
-        )
-        })}
-        </Row>
-      </Container>
-    </section>
+        <Container>
+          <Row>
+            <Col md="12">
+              <div className="main_heading">
+              <p className="fs-2 text-uppercase"> Popular Tours</p>
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            {popularsData.map((val, inx) => {
+              return (
+                <Col md={3} sm={6} xs={12} className="mb-5" key={inx}>
+                  <PopularCard val={val} />
+                </Col>
+              );
+            })}
+          </Row>
+        </Container>
+      </section>
 
       <section className="call_us">
         <Container>
@@ -158,7 +149,7 @@ const Home = () => {
           <Row>
             <Col md="12">
               <div className="main_heading">
-                <h1>Photo Gallery </h1>
+              <p className="fs-2 text-uppercase"> experience</p>
               </div>
             </Col>
           </Row>
@@ -166,6 +157,29 @@ const Home = () => {
             <Col md="12">
               <Gallery />
             </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section className="download">
+        <Container>
+          <Row className="align-items-center mb-5">
+            <Col md="6">
+              <p className="fs-2">Download the <strong>TRAVELSMART</strong> app</p>
+              <p className="fs-4">and discover special object anytime, anywhere</p>
+              <Row>
+                <Col md="6">
+                  <div><a href="/" tabIndex="0"><img class="bn46" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="bn45" /></a>
+                  </div>
+                </Col>
+                <Col md="6">
+                  <div><a href="/" tabIndex="0"><img class="bn45" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" alt="bn45" /></a></div>
+                </Col>
+              </Row>
+            </Col>
+            <Col md="6">
+              <img src={Footerapp} className="img-fluid"></img>            
+              </Col>
           </Row>
         </Container>
       </section>

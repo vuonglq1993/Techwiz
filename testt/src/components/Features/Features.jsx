@@ -1,14 +1,10 @@
 import React from "react";
 import "../Features/features.css";
 
-import feature1 from "../../assets/images/feature/beach-umbrella.png";
-import feature2 from "../../assets/images/feature/deal.png";
-import feature3 from "../../assets/images/feature/location.png";
-import feature4 from "../../assets/images/feature/medal.png";
+import feature5 from "../../assets/images/feature/preview.png";
+
 import { Card, Col, Container, Row } from "react-bootstrap";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 
 
 const Features = () => {
@@ -61,57 +57,37 @@ const Features = () => {
     ],
   };
 
-  const featureList = [
-    {
-      id: 0,
-      image: feature1,
-      title: "Discover the possibilities",
-      des: "With nearly half a million attractions, hotels & more, you're sure to find joy.",
-    },
-    {
-      id: 1,
-      image: feature2,
-      title: "Enjoy deals & delights",
-      des: "Quality activities. Great prices. Plus, earn credits to save more.",
-    },
-    {
-      id: 2,
-      image: feature3,
-      title: "Exploring made easyt",
-      des: "Book last minute, skip lines &amp; get free cancellation for easier exploring.",
-    },
-
-    {
-      id: 3,
-      image: feature4,
-      title: "Travel you can trust",
-      des: "Read reviews & get reliable customer support. We're with you at every step.",
-    },
-  ];
-
+  
   return (
     <>
     
       <section className="feature-section">
         <Container>
           <Row>
-            <Col md="12">
-              <Slider {...settings}>
-                {featureList.map((feature, inx) => {
-                  return (
-                    <Card key={inx}>
-                      <Card.Img
-                        variant="top"
-                        src={feature.image}
-                        className="img-fluid"
-                        alt={feature.title}
-                      />
-                      <Card.Title>{feature.title}</Card.Title>
-                      <Card.Text>{feature.des}</Card.Text>
-                    </Card>
-                  );
-                })}
-              </Slider>
+            <Col lg = "6" md="6" sm = "12">
+            <div className="image-container">
+
+              <img src={feature5} className="img-fluid hover-image"></img>
+              </div>
+            </Col>
+            <Col lg = "6" md="6" sm = "12">
+              <p className="fs-6 m-3"><strong>lorem</strong></p>
+              <p className="fs-3 m-3"><strong>lorem</strong></p>
+            <p className = "fs-6 m-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at fermentum nibh, at porttitor dui. Nulla rutrum rutrum consectetur. Etiam quis dui sit amet augue tempus mattis. Nam dictum maximus elit, at laoreet mi fermentum porta. Praesent ac dolor ante. Mauris dapibus elementum nisi a egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris maximus iaculis purus, eget fermentum ante viverra ac. Pellentesque ut fringilla nulla, sed pharetra odio. Suspendisse at facilisis risus, non finibus est. Donec imperdiet sit amet purus a accumsan. Etiam maximus mollis mi, in tempus urna convallis nec. Pellentesque lectus tellus, sagittis vitae commodo ac, tincidunt id neque.</p>
+            <Row>
+              <Col md="6">
+                <p className="text-success fs-1 mt-5 ms-2">10000+</p>
+                <p className="fs-6 mt-3 ms-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p className="text-success fs-1 mt-5 ms-2">10000+</p>
+                <p className="fs-6 mt-3 ms-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </Col>
+              <Col md="6">
+                <p className="text-success fs-1 mt-5 ms-2">10000+</p>
+                <p className="fs-6 mt-3 ms-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p className="text-success fs-1 mt-5 ms-2">10000+</p>
+                <p className="fs-6 mt-3 ms-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </Col>
+            </Row>
             </Col>
           </Row>
         </Container>

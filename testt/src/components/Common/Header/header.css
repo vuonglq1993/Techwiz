@@ -1,9 +1,22 @@
 .header-section {
-  background-color: #1e3d92; 
-  padding: 15px 0;
+  background-color: #252c67; 
+  padding: 1px 0;
+}
+.header-section .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
+  max-width: 150px; 
+}
+
+.book-now-btn {
+  margin-right: 35px; 
+}
+.logo {
+  margin-left: 35px;
   max-height: 50px;
 }
 
@@ -18,6 +31,9 @@
   font-weight: bold;
   margin-left: 20px;
   text-transform: uppercase;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  color:#31d3ff;
 }
 
 .nav-link:hover {
