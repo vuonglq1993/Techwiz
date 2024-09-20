@@ -4,14 +4,21 @@ import AdvanceSearch from "../../components/AdvanceSearch/AdvanceSearch";
 import { Container, Row, Col, Offcanvas } from "react-bootstrap";
 import PopularCard from "../../components/Cards/PopularCard";
 import { popularsData } from "../../utils/data";
+import ReactPaginate from "react-paginate";
 import Filters from "./Filters";
 import "../Tours/tour.css";
 
 const Tours = () => {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const [curentpage, setCurrentPage] = useState(0);
+  const itemsPerPage = 6;
+  const offset = curentpage * itemsPerPage;
+  const currentItems = popularsData.slice(offset, offset + itemsPerPage);
+  const handlePageClick = ({selected}) => {
+    setCurrentPage(selected);
+  };
 
   useEffect(() => {
     document.title = " Tours   ";
@@ -39,7 +46,7 @@ const Tours = () => {
                       </Col>
                       <Col xl="9" lg="8" md="12" sm="12">
                           <Row>
-                              {popularsData.map((val, inx) => {
+                              {currentItems.map((val, inx) => {
                                   return (
                                       <Col
                                           xl={4}
@@ -54,6 +61,17 @@ const Tours = () => {
                                   );
                               })}
                           </Row>
+                          <ReactPaginate
+                previousLabel={"Previous"}
+                nextLabel={"Next"}
+                breakLabel={"..."}
+                pageCount={Math.ceil(popularsData.length / itemsPerPage)}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={5}
+                onPageChange={handlePageClick}
+                containerClassName={"pagination"}
+                activeClassName={"active"}
+              />
                       </Col>
                   </Row>
               </Container>
